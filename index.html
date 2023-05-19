@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dziennik praktyki zawodowej</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+  <style>
+    #prognozaPogody {
+      display: flex;
+      align-items: center;
+    }
+
+    #weatherIcon {
+      font-size: 72px;
+      margin-right: 20px;
+    }
+
+    #weatherData {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dziennik praktyki zawodowej</h1>
+  </header>
+
+  <section id="prognozaPogody">
+    <div id="weatherIcon"></div>
+    <div id="weatherData"></div>
+  </section>
+
+  <section>
+    <h2>Wprowadź informacje o uczniu</h2>
+    <form id="praktykaForm">
+      <div>
+        <label for="imie">Imię i nazwisko ucznia:</label>
+        <input type="text" id="imie" name="imie" required>
+      </div>
+      <div>
+        <label for="godziny">Ilość godzin wykonanych przez ucznia:</label>
+        <input type="number" id="godziny" name="godziny" min="0" required>
+      </div>
+      <div>
+        <label for="ocena">Ocena końcowa pracy ucznia:</label>
+        <input type="number" id="ocena" name="ocena" min="1" max="6" required>
+      </div>
+      <div>
+        <label for="opinia">Opinia na temat pracy ucznia:</label>
+        <textarea id="opinia" name="opinia" rows="4" required></textarea>
+      </div>
+      <div>
+        <label for="data">Data wpisu:</label>
+        <input type="date" id="data" name="data" required>
+      </div>
+      <div>
+        <label for="email">Adres e-mail ucznia:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <button type="submit">Dodaj wpis</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Wpisy uczniów</h2>
+    <ul id="wpisyUczniow"></ul>
+  </section>
+
+  <footer>
+    <p>Strona stworzona przez <span class="autor">Jakuba Jaśkiewicza</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
